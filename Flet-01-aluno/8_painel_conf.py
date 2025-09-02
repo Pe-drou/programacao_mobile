@@ -28,6 +28,27 @@ def main(page: ft.Page):
                 ft.dropdown.Option("Azul Claro"), ft.dropdown.Option("Verde Claro"), ft.dropdown.Option("Rosa Claro")]
     )
     
+    # Interface
+    page.add(
+        ft.Column([
+            ft.Text("⚙️ Painel de Configuração", size=24, weight=ft.FontWeight.BOLD),
+            ft.Text("Configure o texto abaixo:", size=14),
+            area_preview,
+            ft.Divider(),
+            ft.Row([
+                ft.Column([
+                    ft.Text("📝 Estilo", size=16, weight=ft.FontWeight.BOLD),
+                    switch_negrito, switch_italico, checkbox_sublinhado,
+                    ft.Text(f"Tamanho: {slider_tamanho.value} px"), slider_tamanho
+                ], spacing=10),
+                ft.Column([
+                    ft.Text("🎨 Cores", size=16, weight=ft.FontWeight.BOLD),
+                    dropdown_cor, dropdown_fundo
+                ], spacing=10)
+            ], alignment=ft.MainAxisAlignment.SPACE_AROUND, vertical_alignment=ft.CrossAxisAlignment.START)
+        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=20)
+    )
+    
     def aplicar_config(e):
         texto = area_preview.content
         
@@ -50,26 +71,5 @@ def main(page: ft.Page):
     # Conectar eventos
     for controle in [switch_negrito, switch_italico, checkbox_sublinhado, slider_tamanho, dropdown_cor, dropdown_fundo]:
         controle.on_change = aplicar_config
-    
-    # Interface
-    page.add(
-        ft.Column([
-            ft.Text("⚙️ Painel de Configuração", size=24, weight=ft.FontWeight.BOLD),
-            ft.Text("Configure o texto abaixo:", size=14),
-            area_preview,
-            ft.Divider(),
-            ft.Row([
-                ft.Column([
-                    ft.Text("📝 Estilo", size=16, weight=ft.FontWeight.BOLD),
-                    switch_negrito, switch_italico, checkbox_sublinhado,
-                    ft.Text(f"Tamanho: {slider_tamanho.value}px"), slider_tamanho
-                ], spacing=10),
-                ft.Column([
-                    ft.Text("🎨 Cores", size=16, weight=ft.FontWeight.BOLD),
-                    dropdown_cor, dropdown_fundo
-                ], spacing=10)
-            ], alignment=ft.MainAxisAlignment.SPACE_AROUND, vertical_alignment=ft.CrossAxisAlignment.START)
-        ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=20)
-    )
 
 ft.app(target=main)

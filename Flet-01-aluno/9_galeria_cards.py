@@ -58,7 +58,7 @@ def main(page: ft.Page):
             "descricao": "Melhor amigo", 
             "cor": ft.Colors.BROWN_400, 
             "categoria": "Doméstico", 
-            "tamanho": "Grande"
+            "tamanho": "Médio"
         },
         {
             "nome": "Peixe", 
@@ -107,7 +107,55 @@ def main(page: ft.Page):
             "cor": ft.Colors.CYAN_400, 
             "categoria": "Aquático", 
             "tamanho": "Grande"
-        }
+        },
+        {
+            "nome": "Urso",
+            "emoji": "🐻",
+            "descricao": "Grande Pelúcia",
+            "cor": ft.Colors.BROWN,
+            "categoria": "Selvagem",
+            "tamanho": "Grande"
+        },
+        {
+            "nome": "Macaco",
+            "emoji": "🐵",
+            "descricao": "Bobalhão",
+            "cor": ft.Colors.YELLOW,
+            "categoria": "Selvagem",
+            "tamanho": "Pequeno"
+        },
+        {
+            "nome": "Tartaruga",
+            "emoji": "🐢",
+            "descricao": "Casca Dura",
+            "cor": ft.Colors.GREEN,
+            "categoria": "Doméstico",
+            "tamanho": "Médio"
+        },
+        {
+            "nome": "Cavalo",
+            "emoji": "🐴",
+            "descricao": "Corredor Valente",
+            "cor": ft.Colors.BROWN_200,
+            "categoria": "Doméstico",
+            "tamanho": "Grande"
+        },
+        {
+            "nome": "Lula",
+            "emoji": "🦑",
+            "descricao": "Presidente do Brasil",
+            "cor": ft.Colors.PURPLE_400,
+            "categoria": "Aquático",
+            "tamanho": "Médio"
+        },
+        {
+            "nome": "Foca",
+            "emoji": "🦭",
+            "descricao": "Ama Nutella",
+            "cor": ft.Colors.GREY_400,
+            "categoria": "Aquático",
+            "tamanho": "Grande"
+        },
     ]
     
     # Criação dos elementos visuais da interface

@@ -5,12 +5,15 @@ def main(page: ft.Page):
     page.padding = ft.padding.only(top=40, left=20, right=20, bottom=20)
 
     # Campos e elementos
-    numero1 = ft.TextField(label="Primeiro número", width=200, keyboard_type=ft.KeyboardType.NUMBER),
+    numero1 = ft.TextField(label="Primeiro número", width=200, keyboard_type=ft.KeyboardType.NUMBER)
     numero2 = ft.TextField(label="Segundo número", width=200, keyboard_type=ft.KeyboardType.NUMBER)
     operacao = ft.Dropdown(
         label="Operação", width=200,
         options=[
-            ft.dropdown.Option("Soma"), ft.dropdown.Option("Subtração"), ft.dropdown.Option("Mutiplicação"), ft.dropdown.Option("Divisão")
+            ft.dropdown.Option("Soma"),
+            ft.dropdown.Option("Subtração"),
+            ft.dropdown.Option("Multiplicação"),
+            ft.dropdown.Option("Divisão")
         ]
     )
     resultado = ft.Text("Resultado aparece aqui", size=20, text_align=ft.TextAlign.CENTER, color=ft.Colors.GREY_600)
@@ -44,8 +47,7 @@ def main(page: ft.Page):
             ft.Row([
                 ft.ElevatedButton("Calcular", on_click=calcular, width=150, bgcolor=ft.Colors.GREEN, color=ft.Colors.WHITE),
                 ft.ElevatedButton("Limpar", on_click=limpar, width=150, bgcolor=ft.Colors.GREY, color=ft.Colors.WHITE)
-            ],
-            alignment=ft.MainAxisAlignment.CENTER, spacing=20),
+            ], alignment=ft.MainAxisAlignment.CENTER, spacing=20),
             ft.Divider(),
             resultado
         ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=20)
