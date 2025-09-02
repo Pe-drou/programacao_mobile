@@ -43,7 +43,7 @@ def main(page: ft.Page):
         atualizar_display()
     def decrementar(e):
         nonlocal valor_contador
-        valor_contador = valor_contador/2
+        valor_contador -= 1
         atualizar_display()
     def resetar(e):
         nonlocal valor_contador
