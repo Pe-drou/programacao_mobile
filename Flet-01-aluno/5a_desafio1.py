@@ -80,7 +80,7 @@ def main(page: ft.Page):
             cor_icone = ft.Colors.PURPLE
         
         cartao_perfil.content = ft.Column([
-            ft.Icon(ft.Icons.PERSON, size=60, color=cor_icone),
+            ft.Icon(name=ft.Icons.PERSON, size=60, color=cor_icone),
             ft.Text(campo_nome.value, size=20, weight=ft.FontWeight.BOLD),
             ft.Text(f"{idade} anos - {categoria}", size=14, color=ft.Colors.GREY_600),
             ft.Text(f"Hobby: {dropdown_hobby.value}", size=14),
@@ -90,7 +90,7 @@ def main(page: ft.Page):
                 padding=10,
                 border_radius=20
             )
-        ], horizonta_alignment = ft.CrossAxisAlignment.CENTER, spacing=10)
+        ], horizontal_alignment = ft.CrossAxisAlignment.CENTER, spacing=10)
 
         cartao_perfil.bgcolor = ft.Colors.WHITE
         cartao_perfil.visible = True
